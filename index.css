@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+body{
+    background-color: #34353b;
+}
+
+@media only screen and (max-width:500px) { */
+  /* For mobile phones: */
+  .main, .skill, .experience{
+    width: 100%;
+   } 
+} 
+header{
+    width: 100vw;
+    height: 72vh;
+    
+   
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+header nav img{
+    margin:auto ;
+   height: 200px;
+   width: 90px;
+
+
+
+height: 40px;
+}
+header nav ul a{
+    padding-left: 100px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav ul{
+    display: flex;
+    width: 40vw;
+    margin-top: 40px ;
+   
+}
+header nav .search{
+    margin: 30px;
+  width: 190px;
+  height: 36px;
+ 
+  
+ 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid rgb(116, 103, 103);
+    
+    
+    
+}
+.search i{
+    margin-left: 70px;
+    color: #ffff;
+   
+}
+.search  #inp{
+    margin: 10px;
+    padding: 10px;
+    width:50px;
+    color: #ffff;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.detail{
+    padding-top: 120px;
+    margin: 0px 30px;
+    display: flex;
+    height: 60vh;
+   
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    width: 90vw;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+   
+}
+ .intro h3{
+    color: #fbfbfb;
+    font-weight: 400;
+    font-size: 35px;
+    margin-left: 10vw;
+
+}
+.intro h3 span{
+    color: #fec86a;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+.intro button{
+height: 42px;
+width: 144px;
+margin-left: 12vw;
+margin-top: 10px;
+background-color: transparent;
+border: 2px solid #fec86a;
+color: #fec86a;
+font-size: 12px;
+border-radius: 6px;
+}
+.intro button:hover{
+    background-color: #fec86a;
+  color: #34353b;
+}
+
+
+.detail .social{
+    display: flex;
+    flex-direction: column ;
+  
+    gap:12px
+}
+.social i{
+    font-size: 30px;
+}
+
+.social .line{
+    height: 10vh;
+    background-color: #fec86a;
+    width: 2px;
+}
+.main{
+    height:40vh ;
+   
+    width: 80vw;
+    padding: 60px;
+}
+.main h1{
+   color: #fff;
+   font-size: 50px;
+   font-weight: 700;
+   margin-left: 65px;
+}
+.description{
+    display: flex;
+    align-items: start;
+}
+.description .line{
+ height: 2.5px;
+ width: 20vw;
+ background-color: #fec86a;
+ margin-left: 65px;
+}
+.description p{
+    margin: 20px auto;
+    padding-right:40px ;
+    font-size: 20px;
+   text-indent: 100px;
+}
+.description p span{
+    color: #fec86a;
+}
+
+.skill{
+    
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.skill h1{
+    font-size: 56px;
+    font-weight: 700;
+    color: #fbfbfb;
+
+
+}
+.card{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   align-items: center;
+   gap: 40px;
+   
+  
+   
+   
+
+}
+.skill-card{
+   height: 40vh;
+   width: 40vh;
+   display: flex;
+   flex-direction: column;
+   
+  justify-content: center;
+   align-items: center;
+  
+   background-color: #3d3e42;
+   border-radius: 15px;
+   gap: 2.5vh;
+
+}
+.skill-card img{
+    height: 7.5vw;
+  width: 7.5vw;
+}
+.skill-card h2{
+    color: #fbfbfb;
+}
+.skill-card:hover{
+    background-color: #fec86a;
+}
+
+.portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+   
+    padding: 50px 100px;
+}
+.portfolio h1{
+    color: #fbfbfb;
+    font-size: 50px;
+    font-weight: 600;
+}
+.portfolio-cards{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    margin-top: 50px;
+    
+}
+
+.portfolio-card{
+    height: 45vh;
+    width: 30vw;
+    position: relative;
+    border-radius: 20px;
+    background-color: #3d3e42;
+  overflow: hidden;
+ 
+  align-items: center;
+  justify-content: center; 
+gap: 2.5vh; 
+  transition: all ease 0.5s;
+
+}
+.portfolio-card img{
+    height: 45vh;
+    width: 30vw;
+}
+.overlay{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    /* overflow: hidden; */
+    transform: translate(-50%, -50%);
+  
+}
+
+.portfolio-cards :hover> .overlay{
+  /* transform: translate(-50%,-50%); */
+  opacity: 1;
+}
+.overlay h3{
+    color: #fbfbfb;
+  font-size: 24px;
+}
+.overlay p{
+    color: #df1616;
+  font-size: 16px;
+  text-align: center;
+}
+
+.experience{
+   
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+.darker{
+    background-color: #34353a;
+  width: 100vw;
+  height: 10vh; 
+}
+
+.experience h1{
+    position: absolute;
+  color: #fbfbfb;
+  font-size: 56px;
+  font-family: "Libre Baskerville", serif;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 15%;
+}
+.light{
+    background-color: #3d3e42;
+    width: 100vw;
+    /* height: 90vh; */
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.exp{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    
+}
+.light .exp{
+    height: 30vh;
+    width: 50vw;
+    position: relative;
+    margin-left: 20vh;
+}
+.exp h2 {
+    color: #fbfbfb;
+    font-size: 32px;
+    font-weight: 400;
+   
+  }
+
+  .exp h2::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    color: #fec86a;
+    background-color: #fec86a;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 7.5%;
+    left: -5%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px #fec86a;
+  }
+  .exp-dec::before{
+    content: "";
+  height: 230px;
+  width: 2.5px;
+  background-color: #fbfbfb;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: -5%;
+  }
+  .exp-dec h3{
+    color: #fbfbfb;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0;
+
+  }
+  .exp-dec p{
+    color: #fbfbfb;
+  }
+
+  .contact-me{
+   padding: 100px;
+    width: 100vw;
+    border:2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: -10%;
+  }
+  .contact-me h1{
+    font-size: 56px;
+    color: #fbfbfb;
+    font-weight: 700;
+  }
+  .contact{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .contact-card{
+    background-color: #fec86a;
+    padding: 10px;
+    border-radius: 8px;
+   display: flex;
+    gap: 10px;
+    margin-top: 7.5vh;
+
+
+  }
+
+
+
+
+
